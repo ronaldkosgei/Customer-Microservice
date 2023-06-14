@@ -1,9 +1,13 @@
 package com.customermicroservice.mapper;
 
+import ch.qos.logback.classic.encoder.JsonEncoder;
 import com.customermicroservice.dto.CustomerDto;
 import com.customermicroservice.entity.Customer;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class CustomerMapper {
+
+    private static PasswordEncoder passwordEncoder;
 
     public static CustomerDto mapToCustomerDto(Customer customer) {
         CustomerDto customerDto = new CustomerDto();

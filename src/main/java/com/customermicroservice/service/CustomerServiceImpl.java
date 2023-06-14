@@ -8,6 +8,7 @@ import com.customermicroservice.mapper.CustomerMapper;
 import com.customermicroservice.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
@@ -17,10 +18,10 @@ import reactor.core.publisher.Mono;
 public class CustomerServiceImpl implements CustomerService{
 
 
-    @Autowired
     private final CustomerRepository customerRepository;
 
-    public CustomerServiceImpl(CustomerRepository customerRepository){
+
+    public CustomerServiceImpl(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
 
