@@ -33,7 +33,7 @@ public class CustomerController {
         return customerService.getCustomerById(customerId);
     }
 
-    @GetMapping("/get/{email}")
+    @GetMapping("/getemail/{email}")
     public Mono<CustomerDto> getCustomerByEmail(@RequestParam String email) {
         return customerService.getCustomerByEmail(email);
     }

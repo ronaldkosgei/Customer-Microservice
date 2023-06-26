@@ -1,15 +1,15 @@
-package com.customermicroservice.auth;
+package com.customermicroservice.service;
 
 
-import com.customermicroservice.config.JwtService;
+import com.customermicroservice.auth.AuthenticationRequest;
+import com.customermicroservice.auth.AuthenticationResponse;
+import com.customermicroservice.auth.RegisterRequest;
 import com.customermicroservice.repository.UserRepository;
 import com.customermicroservice.user.Role;
 import com.customermicroservice.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

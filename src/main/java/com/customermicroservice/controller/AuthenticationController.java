@@ -1,13 +1,15 @@
-package com.customermicroservice.auth;
+package com.customermicroservice.controller;
 
 
+import com.customermicroservice.auth.AuthenticationRequest;
+import com.customermicroservice.auth.AuthenticationResponse;
+import com.customermicroservice.service.AuthenticationService;
+import com.customermicroservice.auth.RegisterRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Mono;
 
 
 @RestController
